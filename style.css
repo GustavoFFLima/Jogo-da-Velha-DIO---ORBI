@@ -1,28 +1,49 @@
 body {
     text-align: center;
+    background: black;
+    color: white;
+}
+
+.board {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    grid-template-columns: repeat(3, auto);
 }
 
 .quadrado {
     text-align: center;
     width: 50px;
-    background: #eee;
-    display: inline-block;
-    padding: 40px;
+    padding: 30px;
     font-size: 60px;
-    margin: 5px;
     cursor: pointer;
-    color: #eee;
+    background: black;
+    color: black;
+    border: 1px white solid;
+    border-top: none;
+    border-right: none;
+}
+
+.quadrado:nth-child(3n +1) {
+    border-left: none;
+}
+
+.quadrado:nth-child(n + 7) {
+    border-bottom: none;
 }
 
 .jogador, .vencedor {
     font-size: 30px;
     margin-top: 10px;
+    color: white;
 }
 
 button {
     margin-top: 10px;
     width: 100px;
     height: 30px;
-    background: #eee;
+    background: white;
     cursor: pointer;
+    border-radius: 15px;
+    font-weight: bold;
 }
